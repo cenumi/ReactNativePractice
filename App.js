@@ -12,6 +12,7 @@ import {
     Text,
     View
 } from 'react-native';
+import {BookList} from "./android_views/book/bookList";
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' +
@@ -29,13 +30,9 @@ export default class App extends Component<Props> {
     render() {
         let movie = MOCKED_MOVIES_DATA[0];
         return (
-            <View style={styles.container}>
-                <Image source={{uri:movie.posters.thumbnail}} style={styles.thumbnail}/>
-                <View style={styles.textContainer}>
-                    <Text>{movie.title}</Text>
-                    <Text>{movie.year}</Text>
+                <View style={{flex:1}}>
+                    <BookList/>
                 </View>
-            </View>
         );
     }
 }
