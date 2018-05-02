@@ -14,6 +14,7 @@ const Service = require('./../common/service');
 
 export class BookList extends Component{
 
+
     constructor(props) {
         super(props);
         this.state = {
@@ -79,7 +80,8 @@ export class BookList extends Component{
     };
 
     _onItemClicked = (item)=>{
-        alert('clicked'+item.title);
+        const {navigate} = this.props.navigation;
+        navigate('BookDetailPage',item);
     };
 
 
