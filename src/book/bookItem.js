@@ -19,7 +19,7 @@
 import React,{Component} from "react";
 import {StyleSheet,Text,View,Image,TouchableOpacity} from "react-native";
 
-export class BookItem extends Component{
+export default class BookItem extends Component{
     render(){
         let book = this.props.book;
         return(

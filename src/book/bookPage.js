@@ -4,7 +4,7 @@
 
 import React,{Component} from 'react';
 import {View} from "react-native";
-import {BookList} from "./bookList";
+import BookList from "./bookList";
 
 
 

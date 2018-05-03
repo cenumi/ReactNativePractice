@@ -5,14 +5,14 @@
 
 import React,{Component} from "react";
 import {AppRegistry,Text,StyleSheet,View,Image,TouchableOpacity,FlatList,ScrollView} from "react-native";
-import {BookItem} from "./bookItem";
-import {SearchBar} from "./../widget/searchBar"
+import BookItem from "./bookItem";
+import SearchBar from "./../widget/searchBar"
 
 
 const Util = require('./../common/util');
 const Service = require('./../common/service');
 
-export class BookList extends Component{
+export default class BookList extends Component{
 
 
     constructor(props) {
@@ -33,7 +33,7 @@ export class BookList extends Component{
         let that = this;
         return Util.Util.get(url,(data)=>{
             if(!data.books || data.books.length === 0){
-                this.setState({
+                that.setState({
                    loading:false
                 });
                 return alert('未查询到相关书籍');
